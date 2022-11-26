@@ -1,22 +1,34 @@
+let playerScore = 0;
+let computerScore = 0;
+let round = 0;
+let playerChoice = prompt('rock, paper, or scissors?').toLowerCase();
+let computerChoice = getComputerChoice();
+
 function getComputerChoice(){
     let choicesArr = ['rock', 'paper', 'scissors'];
     return choicesArr[Math.floor(Math.random()*3)]
 }
 
-function playRound(){
-    let playerChoice = prompt('rock, paper, or scissors?').toLowerCase();
-    let computerChoice = getComputerChoice();
+function playRound(playerChoice, computerChoice){
     console.log('player: '+ playerChoice);
     console.log('computer: '+ computerChoice); 
     if (playerChoice == computerChoice){
-        console.log('Tie! Try again')
+        return ('Tie! Try again');
     } else 
     if (((playerChoice ==='rock' && computerChoice === 'scissors'))
     || (playerChoice === 'paper' && computerChoice === 'rock')
     || (playerChoice === 'scissors' && computerChoice === 'paper')) {
-        console.log('You win! '+playerChoice+ ' beats '+ computerChoice)
-    } else 
-    console.log("You lose! "+computerChoice+ " beats "+playerChoice);
+        playerScore++;
+        return ('You win! '+playerChoice+ ' beats '+ computerChoice)
+    } else ;
+    computerScore ++;
+    return ("You lose! "+computerChoice+ " beats "+playerChoice)
 };
 
-playRound();
+function playGame(){
+    for (var i = 0; i < 6; i++){
+        playRound();
+    }
+}
+
+playGame();
