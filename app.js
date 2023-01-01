@@ -1,7 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
 let round = 1;
-let playerChoice = getPlayerChoice();
+// let playerChoice = getPlayerChoice();
+let playerChoice = '';
 let computerChoice = getComputerChoice();
 
 function getComputerChoice(){
@@ -9,10 +10,10 @@ function getComputerChoice(){
     return choicesArr[Math.floor(Math.random()*3)]
 }
 
-function getPlayerChoice(){
-    let choice = prompt('rock, paper, or scissors?');
-    return choice.toLowerCase();
-}
+// function getPlayerChoice(){
+//     let choice = prompt('rock, paper, or scissors?');
+//     return choice.toLowerCase();
+// }
 
 function gameEnd(){
     if (playerScore > computerScore){
@@ -57,5 +58,15 @@ function playGame(){
     }
     gameEnd();
 }
+
+const buttons = document.querySelectorAll('button')
+const choiceContainer = document.querySelector('.choice-container');  
+
+buttons.forEach(button => button.addEventListener('click', function(e) {
+    console.log(e.target.classList.value);
+    playerChoice = e.target.classList.value;
+    console.log('player choice is now ' + playerChoice);
+    choiceContainer.textContent = playerChoice;
+}));
 
 playGame();

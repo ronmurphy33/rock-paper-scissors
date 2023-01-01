@@ -1,0 +1,44 @@
+body{
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+#container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    padding-top: 200px;
+    border: 2px solid red;
+}
+
+#button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: 75px;
+    width: 75%;
+    border: 2px solid green;
+}
+
+.rock, .paper, .scissors{
+    width: 200px;
+    height: 200px;
+}
+
+.choice-container{
+    border: 3px solid red;
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    
+}
+
+.computer-choice, .player-choice{
+    flex:1;
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    font-size: 2rem;
+}
