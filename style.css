@@ -27,7 +27,7 @@ body{
     height: 200px;
 }
 
-.choice-container{
+.choice-container, .score-container{
     border: 3px solid red;
     display: flex;
     width: 75%;
@@ -35,7 +35,7 @@ body{
     
 }
 
-.computer-choice, .player-choice{
+.computer, .player{
     flex:1;
     justify-content: center;
     gap: 10px;
