@@ -27,12 +27,22 @@ body{
     height: 200px;
 }
 
-.choice-container, .score-container{
+.choice-container, .score-container, .game-narrator{
     border: 3px solid red;
     display: flex;
     width: 75%;
     justify-content: space-around;
+    font-size: 2rem;
     
+}
+
+.round-container{
+    display: flex;
+    width: 75%;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    padding-right: 20px;
+
 }
 
 .computer, .player{
@@ -40,5 +50,4 @@ body{
     justify-content: center;
     gap: 10px;
     display: flex;
-    font-size: 2rem;
 }
