@@ -5,6 +5,7 @@ const computerChoiceDom = document.querySelector('.computer-choice');
 const gameNarratorDom = document.querySelector('.game-narrator');
 const inputButtons = document.querySelectorAll('input');
 const roundDom = document.querySelector('.round');
+const resetGameButton = document.querySelector('.reset');
 
 
 let playerScore = 0;
@@ -19,12 +20,6 @@ function getComputerChoice(){
     let choicesArr = ['rock', 'paper', 'scissors'];
     return choicesArr[Math.floor(Math.random()*3)]
 }
-
-// function getPlayerChoice(){
-//     let choice = prompt('rock, paper, or scissors?');
-//     playerChoiceDom.textContent = choice.toLowerCase();
-//     return choice.toLowerCase();
-// }
 
 function gameEnd(){
     if (playerScore > computerScore){
@@ -81,6 +76,7 @@ function playGame(){
         roundDom.textContent = 'Round ' + round + ' of 5';
     }
     if(round > 5 ){
+        resetGameButton.textContent = 'Play Again';
         gameEnd();
     }
 }
@@ -92,4 +88,9 @@ inputButtons.forEach((button) =>{
         playGame();
     });
 });
+
+resetGameButton.addEventListener('click', () =>{
+    location.reload();
+
+})
 
