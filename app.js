@@ -85,8 +85,13 @@ function playGame(){
 
 inputButtons.forEach((button) =>{
     button.addEventListener('click', () =>{
-        playerChoice = button.classList.value;
-        playGame();
+        if(round <= 5){
+            playerChoice = button.classList.value;
+            playGame();
+        }
+        else{
+            gameNarratorDom.textContent = 'Game Over! Play Again?'
+        }
     });
 });
 
