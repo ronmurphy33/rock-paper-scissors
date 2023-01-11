@@ -63,6 +63,7 @@ function playGame(){
         if (results == "computer"){
             computerScore ++
             computerScoreDom.textContent = computerScore;
+            
         } else 
         if (results == "player"){
             playerScore ++

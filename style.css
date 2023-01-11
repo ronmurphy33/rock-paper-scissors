@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     height: 100vh;
     color: white;
@@ -17,15 +20,27 @@ body{
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
-    gap: 75px;
+    gap: 3rem;
     width: 75%;
     padding: 10px; 
-    background: #3b4a6b; 
+    background: #3b4a6b;
+    overflow: auto;
+
 }
 
 .rock, .paper, .scissors{
     width: 200px;
     height: 200px;
+    transition: 200ms;
+    max-width: 100%;
+}
+
+image{
+    max-width: 100%;
+}
+
+.rock:hover, .paper:hover, .scissors:hover, .reset:hover{
+    transform:translateY(-10px);
 }
 
 .choice-container, .score-container, .game-narrator{
@@ -57,6 +72,7 @@ body{
     padding: 15px;
     background: #22b2da; 
     color: white;
+    transition: 200ms;
 }
 
 .computer, .player{
@@ -74,3 +90,4 @@ body{
 .score-container{
     border-radius: 0px 0px 50px 50px;
 }
+
