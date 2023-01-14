@@ -98,6 +98,7 @@ body{
         flex-wrap: wrap;
         transition: 200ms;
         width: 75%;
+        height: 
     }
 
     .choice-container, .score-container, .game-narrator{
@@ -125,6 +126,10 @@ body{
 
     .game-narrator{
         text-align: center;
+    }
+    
+    #container{
+     padding-top: 100px;
     }
     
 
