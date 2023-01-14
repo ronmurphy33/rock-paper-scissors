@@ -7,5 +7,8 @@
 * Rounds that are tied are not counted and played again. 
 * The player simply clicks on their choice to start the game and to play subsequent rounds. 
 
+![image](rps-game.png)
+![image](rps-game-mobile.png)
+
 
 
