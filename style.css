@@ -97,7 +97,7 @@ body{
     #button-container{
         flex-wrap: wrap;
         transition: 200ms;
-        width: 75%
+        width: 75%;
     }
 
     .choice-container, .score-container, .game-narrator{
@@ -110,6 +110,7 @@ body{
     }
     .round-container{
         width: 75%;
+    }
 
     .reset{
         margin:5px;
